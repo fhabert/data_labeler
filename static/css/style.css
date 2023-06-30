@@ -1,0 +1,6 @@
+.img-display {
+    width:200px;
+    height:auto;
+    display:flex;
+    justify-content: center;
+}

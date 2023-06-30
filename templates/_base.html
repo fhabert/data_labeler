@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title> {% block title %} {% endblock %} </title>
+
+{% load bootstrap5 %}
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+<script src="{% static 'index.js' %}"></script>  
+{% bootstrap_css %}
+{% bootstrap_javascript %}
+</head>
+<body>
+    <div class="d-flex" style="justify-content:space-between;margin-bottom:50px;margin-top:50px;">
+        <a class="btn btn-outline-primary" href="/"> Home </a>
+        <h1 style="text-align:center;"> Data Labeling project </h1>
+        <button type="button" class="btn btn-outline-info">Info</button>
+    </div>
+  <div class="container">
+    {% block content %}{% endblock %}
+  </div>
+</body>
+</html>
